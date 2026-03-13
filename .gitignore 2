@@ -1,0 +1,26 @@
+.DS_Store
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*~
+
+# CMake/build artifacts
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Downward release / build artifacts
+downward/builds/
+
+# Generated plans / logs
+*.plan
+*.log
+
+# Mac / Editor
+*.sublime-project
+*.sublime-workspace

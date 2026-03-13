@@ -1,0 +1,26 @@
+flowchart LR
+  subgraph Habitacion
+    direction TB
+    Suelo([Suelo])
+    Caja([Caja])
+    Mono([Mono])
+    Banana([Banana])
+  end
+
+  %% Posiciones iniciales
+  Mono -.-> Suelo
+  Caja -.-> Suelo
+  Banana -.-> Habitacion
+
+  %% Movimientos
+  Mono -->|moverse a caja| Caja
+  Mono -->|subirse| Caja
+  Mono -->|alcanzar banana| Banana
+  Mono -->|agarrar banana| Banana
+
+  classDef item fill:#fffbcc,stroke:#333,stroke-width:1px
+  class Mono,Caja,Banana,Suelo item
+  class Mono fill:#cce5ff
+  class Caja fill:#ffe0b3
+  class Banana fill:#fff3b3
+  class Suelo fill:#e5e5e5

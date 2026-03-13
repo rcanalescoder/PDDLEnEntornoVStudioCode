@@ -1,0 +1,18 @@
+flowchart TB
+  A[PDDL dominio problema] --> |1 Traduccion| B[Translate PDDL a SAS]
+  B --> |2 Salida SAS| C[SAS output]
+  C --> |3 Busqueda| D[Planner downward]
+  D --> |4 Genera plan| E[Plan final sas_plan]
+  E --> F[Plan pasos de accion]
+  F --> G[subirse mono caja suelo]
+  F --> H[alcanzar mono caja banano]
+  F --> I[agarrar mono banano]
+  subgraph Opcional
+    A2[Script ejecutar.sh] --> A
+  end
+  style A2 fill:#f9f,stroke:#333,stroke-width:2px
+  style B fill:#bbf,stroke:#333,stroke-width:2px
+  style C fill:#bfb,stroke:#333,stroke-width:2px
+  style D fill:#ffb,stroke:#333,stroke-width:2px
+  style E fill:#fbf,stroke:#333,stroke-width:2px
+  style F fill:#eef,stroke:#333,stroke-width:2px

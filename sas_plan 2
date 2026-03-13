@@ -1,0 +1,4 @@
+(subirse mono caja suelo)
+(alcanzar mono caja banano)
+(agarrar mono banano)
+; cost = 3 (unit cost)
